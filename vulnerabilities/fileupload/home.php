@@ -17,7 +17,7 @@
       </div>
 
       <div class="well">
-        <table width="100%" style="border-collapse:collapse; table-layout:fixed;"><tr><th scope="col">
+        <th width="100%" style="border-collapse:collapse; table-layout:fixed;"><tr><td>
           <div class="col-lg-12"> 
             <p><h4>Add New Item to the Coffee List</h4><br>
               <form method='post' action='' enctype="multipart/form-data">
@@ -39,8 +39,8 @@
              </form>
            </p>
          </div>
-       </th>
-       <th scope="col">
+       </td>
+       <td>
         <div class="col-lg-12"> 
           <p><h4></h4><br>
 
@@ -105,7 +105,7 @@
             ?>
           </p>
         </div>
-       </th></tr></table>
+       </td></tr></th>
       <hr>
       
     </div>
