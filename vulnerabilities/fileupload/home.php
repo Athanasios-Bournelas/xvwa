@@ -40,7 +40,7 @@
            </p>
          </div>
        </th>
-       <td>
+       <th scope="col">
         <div class="col-lg-12"> 
           <p><h4></h4><br>
 
@@ -105,7 +105,7 @@
             ?>
           </p>
         </div>
-       </td></tr></table>
+       </th></tr></table>
       <hr>
       
     </div>
