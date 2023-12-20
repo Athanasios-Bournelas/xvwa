@@ -21,20 +21,18 @@
 </div>
 
 <div class="well">
-$INCLUDE_ALLOW_LIST = [
-    "home.php",
-    "dashboard.php",
-    "profile.php",
-    "settings.php" 
-];
-
-
     <p>
         <form method="get" action="">
             <div class="form-group">
                 <br>
                 <div class="text-left">
                 <?php 
+                    $INCLUDE_ALLOW_LIST = [
+                       "home.php",
+                       "dashboard.php",
+                       "profile.php",
+                       "settings.php" 
+                    ];
                     $f='readme.txt';
                     echo "<a class=\"btn btn-primary\" href=\".?file=$f\" /> Click here </a><br><br>";
 
