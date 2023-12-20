@@ -38,7 +38,7 @@
 
                     if (isset($_GET['file'])) {
                         $file=$_GET['file'];
-                        if (in_array($filename, $INCLUDE_ALLOW_LIST)) {
+                        if (in_array($file, $INCLUDE_ALLOW_LIST)) {
                           include($file);
                         }
                     }                 
