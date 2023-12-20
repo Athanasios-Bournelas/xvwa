@@ -21,6 +21,13 @@
 </div>
 
 <div class="well">
+$INCLUDE_ALLOW_LIST = [
+    "home.php",
+    "dashboard.php",
+    "profile.php",
+    "settings.php" 
+];
+
 
     <p>
         <form method="get" action="">
@@ -33,7 +40,9 @@
 
                     if (isset($_GET['file'])) {
                         $file=$_GET['file'];
-                        include($file);
+                        if (in_array($filename, $INCLUDE_ALLOW_LIST)) {
+                          include($file);
+                        }
                     }                 
                 ?>
                 </div>
