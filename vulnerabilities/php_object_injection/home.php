@@ -29,8 +29,17 @@ jection">https://www.owasp.org/index.php/PHP_Object_Injection</a></p></strong>
 
                                 function __wakeup(){
                                     if(isset($this->inject)){
-                                        eval($this->inject);
-                                    }
+                                       // eval($this->inject);
+                                        function replaceEval($this->inject) {
+                                            $tmpfname = tempnam("/tmp", "replaceEval");
+                                            $handle = fopen($tmpfname, "w+");
+                                            fwrite($handle, "<?php\n" . $this->inject);
+                                            fclose($handle);
+                                            include $tmpfname;
+                                            unlink($tmpfname);
+                                            return get_defined_vars();
+                                        }
+                                        extract(replaceEval($this->inject));
                                 }
                             }
                             if(isset($_REQUEST['r'])){  
