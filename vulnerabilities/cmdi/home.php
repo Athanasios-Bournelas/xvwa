@@ -30,8 +30,10 @@
         </p>
     </div>
             <?php
-            if (isset($_REQUEST['target'])) {
-                $target = $_REQUEST['target'];
+            $allowedCommands = [["/bin/ping","-c","1","--"],["/usr/bin/host","--"]];
+            $command = $allowedCommands[$_REQUEST['target']];
+            if (isset($command)) {
+                $target = $command;
                 if($target){
                     if (stristr(php_uname('s'), 'Windows NT')) { 
             
